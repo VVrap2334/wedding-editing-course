@@ -1,0 +1,215 @@
+﻿'use client';
+
+
+import React from "react";
+import Head from "next/head";
+import { Button } from "@/components/ui/button";
+
+
+export default function LandingPage() {
+  const handleEnrollClick = () => {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'enroll_button_click', {
+        event_category: 'user_action',
+        event_label: 'Enroll Button Click',
+      });
+    } else {
+      console.log('gtag not available or not loaded');
+    }
+  };
+
+
+  return (
+    <>
+      <Head>
+        <title>Wedding Video Editing Course – Rajesh S</title>
+        <meta
+          name="description"
+          content="Learn wedding trailer editing, storytelling, transitions & color grading in 60 days with Rajesh S. Enroll now!"
+        />
+      </Head>
+
+
+      <div className="bg-white text-gray-800 font-sans">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-24 px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+            Become a Wedding Video Editing Pro in Just 60 Days
+          </h1>
+          <p className="text-xl md:text-2xl mb-8">
+            Master trailer editing, cinematic storytelling, transitions & color grading from expert Rajesh S.
+          </p>
+          <Button
+            className="bg-yellow-400 text-black text-lg px-8 py-4 rounded-full hover:bg-yellow-300 transition-all duration-300"
+            onClick={handleEnrollClick}
+          >
+            🎁 Enroll Now & Get Bonuses Worth ₹4,999
+          </Button>
+          <p className="mt-4 text-sm">Next batch starts soon • Limited seats available!</p>
+        </section>
+
+
+        {/* What You’ll Learn */}
+        <section className="py-20 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">What You’ll Master in 60 Days</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-lg">
+            {[
+              { title: "Week 1-2", desc: "Basics & Software Workflow" },
+              { title: "Week 3-4", desc: "Trailer Editing + Pacing Techniques" },
+              { title: "Week 5-6", desc: "Transitions, Highlights & Color Grading" },
+              { title: "Bonus", desc: "Storytelling, Client Handling & Portfolio" },
+            ].map((item, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+        {/* Course Features */}
+        <section className="bg-gray-100 py-20 px-4 sm:px-6 md:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12">Course Highlights</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-lg">
+            {[
+              "40+ Hours of Live Sessions",
+              "Real Wedding Footage Projects",
+              "Exclusive LUT Pack & Assets",
+              "Hands-on Trailer Editing Assignments",
+              "Certificate of Completion",
+              "Lifetime Access to Private Student Group",
+            ].map((feature, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+                <p>✔️ {feature}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+        {/* Pricing Plans */}
+        <section className="py-20 px-4 sm:px-6 md:px-8 bg-white">
+          <h2 className="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { title: "Starter", price: "₹7,500", features: ["30 Days Access", "Basic Editing Lessons", "1 Project"], highlighted: false },
+              { title: "Pro (Best)", price: "₹15,000", features: ["60 Days Access", "Full Curriculum", "Bonus Materials", "Private Group"], highlighted: true },
+              { title: "Mastery", price: "₹25,000", features: ["Everything in Pro", "1-on-1 Mentoring", "Portfolio Review"], highlighted: false },
+            ].map(({ title, price, features, highlighted }, idx) => (
+              <div key={idx} className={`relative rounded-2xl p-6 shadow-lg border-2 ${highlighted ? "border-yellow-400 bg-yellow-100" : "border-gray-200 bg-white"}`}>
+                {highlighted && (
+                  <span className="text-sm text-white bg-indigo-600 px-2 py-1 rounded-full absolute top-4 right-4">
+                    Best Value
+                  </span>
+                )}
+                <h3 className="text-2xl font-bold mb-2">{title}</h3>
+                <p className="text-xl font-semibold mb-4">{price}</p>
+                <ul className="space-y-2 mb-4">
+                  {features.map((f, i) => (
+                    <li key={i}>✔️ {f}</li>
+                  ))}
+                </ul>
+                <Button className="w-full bg-indigo-600 text-white hover:bg-indigo-500 transition-all duration-300">
+                  Enroll Now
+                </Button>
+              </div>
+            ))}
+          </div>
+          <p className="text-center mt-6 text-sm text-gray-600">*EMI Available • Limited seats only*</p>
+        </section>
+
+
+        {/* Testimonials Section */}
+        <section className="bg-gray-50 py-20 px-4 sm:px-6 md:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12">What Our Students Say</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { name: "Ravi K.", text: "Rajesh sir changed my career. I now edit wedding trailers for top studios!", role: "Now a freelance editor" },
+              { name: "Meena S.", text: "The hands-on projects and LUT packs were a game-changer. Highly recommended!", role: "Wedding studio owner" },
+              { name: "Harish M.", text: "60 days and I landed my first wedding editing job. Thanks Rajesh sir!", role: "Video editor at Pixel Studios" },
+            ].map((t, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow-md">
+                <p className="text-lg italic">“{t.text}”</p>
+                <p className="mt-4 font-semibold">– {t.name}</p>
+                <p className="text-sm text-gray-500">{t.role}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+        {/* Instructor Section */}
+        <section className="py-20 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Meet Your Instructor – Rajesh S</h2>
+          <p className="text-lg">🎥 13+ Years in Wedding Industry | 🎓 Trained 1000+ Students | 🎬 Colorist & Editing Mentor</p>
+          <p className="mt-6 text-gray-600">“I’ve built this course to take you from absolute beginner to confident professional. Join me and learn how to tell cinematic wedding stories that clients love.”</p>
+          <img src="/rajesh-profile.jpg" alt="Instructor Rajesh S – Wedding Video Editing Mentor" className="mx-auto mt-6 rounded-full w-40 h-40 object-cover" />
+        </section>
+
+
+        {/* Final CTA Section */}
+        <section className="bg-indigo-700 text-white text-center py-20 px-6">
+          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Editing Career?</h2>
+          <p className="text-xl mb-8">Grab your seat now – limited time offer!</p>
+          <Button className="bg-yellow-400 text-black text-lg px-8 py-4 rounded-full hover:bg-yellow-300 transition-all duration-300">
+            🎬 Enroll in the 60-Day Pro Course
+          </Button>
+          <p className="mt-4 text-sm">Offer valid till April 25th • Access from any device</p>
+          <p className="mt-1 text-sm">🔥 Bonus worth ₹4,999 included when you enroll before April 25th</p>
+        </section>
+
+
+        {/* FAQs Section */}
+        <section className="bg-white py-20 px-4 sm:px-6 md:px-8">
+          <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <div className="max-w-3xl mx-auto space-y-4 text-left">
+            {[
+              {
+                q: "What software do I need for this course?",
+                a: "We recommend Adobe Premiere Pro and DaVinci Resolve. Guidance for setup will be provided."
+              },
+              {
+                q: "Are the classes live or recorded?",
+                a: "All sessions are live and interactive. Recordings will also be available for revision."
+              },
+              {
+                q: "Do I need prior experience in video editing?",
+                a: "No. This course starts from basics and moves to advanced techniques. Beginners are welcome."
+              },
+              {
+                q: "Can I get a refund if I’m not satisfied?",
+                a: "We offer a 7-day refund policy from the course start date."
+              },
+              {
+                q: "Will I get lifetime access to course material?",
+                a: "Yes. You’ll have lifetime access to downloadable resources and session recordings."
+              },
+              {
+                q: "What language is the course taught in?",
+                a: "The course is conducted in Tamil, making it easy to understand for native speakers."
+              },
+              {
+                q: "How do I contact the team for help?",
+                a: "You can click the WhatsApp chat button at the bottom right corner for instant support."
+              },
+            ].map((faq, idx) => (
+              <details key={idx} className="border rounded-md p-4">
+                <summary className="text-xl font-semibold cursor-pointer">{faq.q}</summary>
+                <p className="text-gray-700 mt-2">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+
+        {/* WhatsApp CTA Button */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <a href="https://wa.me/917560016712" target="_blank" className="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-green-400 transition-all duration-300">
+            <img src="/whatsapp-icon.png" alt="Chat with us on WhatsApp" className="w-8 h-8" />
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
