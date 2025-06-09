@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video Visionary Academy - Master the art of wedding video editing, color grading and cinematography with expert instructor Rajesh S. Join our comprehensive courses and workshops.">
+    <title>Video Visionary Academy - Limitless Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #ff7a59; /* Orange */
+            --secondary-color: #ff5e95; /* Pink */
+            --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --dark-color: #0a3b5c;
+            --light-color: #fff;
+            --gray-color: #f5f5f5;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.3;
+            color: var(--dark-color);
+        }
+        
+        p {
+            margin: 15px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--dark-color);
+            transition: var(--transition);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gradient-bg);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 122, 89, 0.2);
+        }
+        
+        .btn:hover {
+            box-shadow: 0 8px 25px rgba(255, 122, 89, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: var(--gradient-bg);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 15px auto;
+            color: #666;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--dark-color);
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+            margin-left: 4px;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-menu a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-btn {
+            background: var(--gradient-bg);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .nav-btn:hover {
+            box-shadow: 0 4px 15px rgba(255, 122, 89, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--dark-color);
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.1), rgba(255, 94, 149, 0.1));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 122, 89, 0.3), transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 94, 149, 0.3), transparent 70%);
+            bottom: -50px;
+            left: -50px;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            animation: slideInLeft 1s ease forwards;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .hero-btns .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .hero-btns .btn-secondary:hover {
+            background: var(--gradient-bg);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: slideInRight 1s ease forwards;
+        }
+        
+        .hero-image img {
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 122, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .stat-icon i {
+            color: var(--primary-color);
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--dark-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary-color);
+            border-radius: 15px;
+            top: 20px;
+            right: -20px;
+            z-index: -1;
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 122, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .feature-icon i {
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        
+        .feature-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .feature-text p {
+            font-size: 14px;
+            margin: 0;
+            color: #666;
+        }
+        
+        /* Course Section Styles */
+        .courses {
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.05), rgba(255, 94, 149, 0.05));
+            padding: 80px 0;
+        }
+        
+        .course-category {
+            margin-bottom: 60px;
+        }
+        
+        .category-title {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .course-card:hover .course-image img {
+            transform: scale(1.05);
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .course-price {
+            background: var(--gradient-bg);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        
+        .course-details {
+            margin-bottom: 20px;
+        }
+        
+        .course-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-details li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-details li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .why-choose-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .why-card {
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.05), rgba(255, 94, 149, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .why-card-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 122, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .why-card:nth-child(2) .why-card-icon {
+            background: rgba(255, 94, 149, 0.1);
+        }
+        
+        .why-card:nth-child(3) .why-card-icon {
+            background: rgba(255, 180, 89, 0.1);
+        }
+        
+        .why-card-icon i {
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+        
+        .why-card:nth-child(2) .why-card-icon i {
+            color: var(--secondary-color);
+        }
+        
+        .why-card:nth-child(3) .why-card-icon i {
+            color: #ff9c59;
+        }
+        
+        .why-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .why-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .why-card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .why-card-link i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .why-card-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        .why-card:nth-child(2) .why-card-link {
+            color: var(--secondary-color);
+        }
+        
+        .why-card:nth-child(3) .why-card-link {
+            color: #ff9c59;
+        }
+        
+        /* Free Resources Section */
+        .resources {
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.05), rgba(255, 94, 149, 0.05));
+            padding: 80px 0;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .resource-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .resource-card:hover .resource-image img {
+            transform: scale(1.05);
+        }
+        
+        .resource-content {
+            padding: 20px;
+        }
+        
+        .resource-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .resource-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .resource-btn {
+            display: inline-block;
+            background: var(--gradient-bg);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .resource-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 122, 89, 0.2);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials-container {
+            position: relative;
+        }
+        
+        .testimonial-slider {
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.05), rgba(255, 94, 149, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            position: relative;
+        }
+        
+        .testimonial-content::before {
+            content: '"';
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #666;
+            margin: 0;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider-dot.active {
+            background: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(255, 122, 89, 0.05), rgba(255, 94, 149, 0.05));
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 122, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .contact-icon i {
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p, .contact-text a {
+            color: #666;
+            margin: 0;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 122, 89, 0.3);
+        }
+        
+        .social-icon i {
+            color: white;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 122, 89, 0.1);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            width: 100%;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--primary-color);
+        }
+        
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-bg);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .footer-newsletter p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+        }
+        
+        .newsletter-btn {
+            background: var(--gradient-bg);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 50px 50px 0;
+            cursor: pointer;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .course-grid, .why-choose-cards, .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .hero-container, .about-container, .contact-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content, .about-content {
+                order: 1;
+            }
+            
+            .hero-image, .about-image {
+                order: 2;
+                margin-top: 30px;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .about-image::before {
+                display: none;
+            }
+            
+            .about-features {
+                justify-content: center;
+            }
+            
+            .feature-item {
+                justify-content: center;
+                text-align: left;
+            }
+            
+            .contact-info {
+                align-items: center;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin: 0 0 15px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                background: white;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                top: 80px;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .course-grid, .why-choose-cards, .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .footer-links a i {
+                display: none;
+            }
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .slide-in-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .slide-in-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <img src="https://via.placeholder.com/40x40/ff7a59/ffffff?text=VV" alt="Video Visionary Logo">
+                    Video<span>Visionary</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#why-choose">Why Choose Us</a></li>
+                        <li><a href="#resources">Free Resources</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#courses" class="nav-btn">Enroll Now</a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Limitless Learning in Wedding Film Editing</h1>
+                    <p>Master professional video editing, color grading, and cinematic storytelling with India's premier wedding film education academy.</p>
+                    <div class="hero-btns">
+                        <a href="#courses" class="btn">Explore Courses</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div>
+                                <span class="stat-number">13+</span>
+                                <span class="stat-label">Years of Experience</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Students Trained</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400/ff5e95/ffffff?text=Wedding+Filmmaking" alt="Wedding Video Editing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Rajesh S & Video Visionary</h2>
+                <p>Learn from a professional with over 13 years of industry experience</p>
+            </div>
+            <div class="about-container">
+                <div class="about-image fade-in">
+                    <img src="https://via.placeholder.com/600x400/0a3b5c/ffffff?text=Rajesh+S" alt="Rajesh S - Founder">
+                </div>
+                <div class="about-content fade-in">
+                    <h2>Passionate Wedding Filmmaker & Educator</h2>
+                    <p>Rajesh S is a passionate and highly experienced wedding filmmaker with over 13 years in the wedding industry. With a deep love for storytelling through visuals, he has evolved into a professional video editor, colorist, and instructor.</p>
+                    <p>Over the past 1.5 years, Rajesh has transitioned into teaching and mentoring aspiring editors and creatives. His mission is to empower individuals in the wedding visual arts industry with professional-level editing, color grading, photography, album design, and video creation skills.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Wedding Filmmaker</h4>
+                                <p>13+ Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Professional Editor</h4>
+                                <p>Expert in Premiere Pro</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Educator</h4>
+                                <p>Dedicated Mentor</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Color Grading</h4>
+                                <p>Advanced DI Techniques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Educational Programs</h2>
+                <p>Comprehensive courses designed to transform beginners into wedding editing professionals</p>
+            </div>
+            
+            <!-- Long-Term Courses -->
+            <div class="course-category">
+                <h3 class="category-title">Long-Term Comprehensive Courses</h3>
+                <div class="course-grid">
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff7a59/ffffff?text=90+Days+Course" alt="90 Days Course">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 90 Days</span>
+                                <span class="course-price">₹35,000</span>
+                            </div>
+                            <h3>Comprehensive Wedding Editing Mastery</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Complete wedding editing workflows</li>
+                                    <li><i class="fas fa-check-circle"></i> Professional trailer creation</li>
+                                    <li><i class="fas fa-check-circle"></i> Cinematic storytelling techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Advanced sound design</li>
+                                    <li><i class="fas fa-check-circle"></i> Color grading with custom LUTs</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff5e95/ffffff?text=60+Days+Course" alt="60 Days Course">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 60 Days</span>
+                                <span class="course-price">₹25,000</span>
+                            </div>
+                            <h3>Wedding Trailer Editing Course</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Professional trailer editing</li>
+                                    <li><i class="fas fa-check-circle"></i> Narrative techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Music selection and pacing</li>
+                                    <li><i class="fas fa-check-circle"></i> Basic color grading</li>
+                                    <li><i class="fas fa-check-circle"></i> Client delivery workflows</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/0a3b5c/ffffff?text=45+Days+Course" alt="45 Days Course">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 45 Days</span>
+                                <span class="course-price">₹15,000</span>
+                            </div>
+                            <h3>Wedding Video Editing Course</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Wedding highlights creation</li>
+                                    <li><i class="fas fa-check-circle"></i> Basic trailer techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Efficient editing workflows</li>
+                                    <li><i class="fas fa-check-circle"></i> Introduction to color correction</li>
+                                    <li><i class="fas fa-check-circle"></i> Perfect for beginners</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Long-Term Courses -->
+            <div class="course-category">
+                <h3 class="category-title">Specialized Courses</h3>
+                <div class="course-grid">
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff7a59/ffffff?text=30+Days+DI+Course" alt="DI Course">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 30 Days</span>
+                                <span class="course-price">₹12,000</span>
+                            </div>
+                            <h3>Digital Intermediate (DI) Course</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Professional color grading</li>
+                                    <li><i class="fas fa-check-circle"></i> Create your own LUTs</li>
+                                    <li><i class="fas fa-check-circle"></i> Color psychology for wedding films</li>
+                                    <li><i class="fas fa-check-circle"></i> Free Avwaya LUT packs included</li>
+                                    <li><i class="fas fa-check-circle"></i> Master Lumetri Color panel</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff5e95/ffffff?text=Photoshop+Course" alt="Photoshop Course">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 45 Days</span>
+                                <span class="course-price">₹15,000</span>
+                            </div>
+                            <h3>Photoshop Course (Basic to Advanced)</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Professional retouching</li>
+                                    <li><i class="fas fa-check-circle"></i> Album layout design</li>
+                                    <li><i class="fas fa-check-circle"></i> Creative manipulation</li>
+                                    <li><i class="fas fa-check-circle"></i> Wedding photo enhancement</li>
+                                    <li><i class="fas fa-check-circle"></i> Portfolio creation</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Short-Term Workshops -->
+            <div class="course-category">
+                <h3 class="category-title">Short-Term Workshops</h3>
+                <div class="course-grid">
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/0a3b5c/ffffff?text=3+Day+Workshop" alt="3-Day Workshop">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 3 Days</span>
+                                <span class="course-price">₹499</span>
+                            </div>
+                            <h3>Wedding Video Workshop</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Basics of wedding editing</li>
+                                    <li><i class="fas fa-check-circle"></i> Quick editing techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Weekend-friendly schedule</li>
+                                    <li><i class="fas fa-check-circle"></i> Perfect introduction to editing</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff7a59/ffffff?text=5+Day+Workshop" alt="5-Day Workshop">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 5 Days</span>
+                                <span class="course-price">Starts at ₹999</span>
+                            </div>
+                            <h3>Pre-Wedding Song Editing + Colour Grading</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Cinematic storytelling</li>
+                                    <li><i class="fas fa-check-circle"></i> Visual pacing techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Creative visual effects</li>
+                                    <li><i class="fas fa-check-circle"></i> Basic color grading</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card fade-in">
+                        <div class="course-image">
+                            <img src="https://via.placeholder.com/600x400/ff5e95/ffffff?text=3+Day+Teaser" alt="Teaser Workshop">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="far fa-calendar"></i> 3 Days</span>
+                                <span class="course-price">₹1,499</span>
+                            </div>
+                            <h3>Wedding Teaser Editing Workshop</h3>
+                            <div class="course-details">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> High-energy editing styles</li>
+                                    <li><i class="fas fa-check-circle"></i> Fast-paced techniques</li>
+                                    <li><i class="fas fa-check-circle"></i> Cinematic sound design</li>
+                                    <li><i class="fas fa-check-circle"></i> Evening sessions available</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section-padding" id="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Video Visionary</h2>
+                <p>Discover the advantages that make our academy the preferred choice for wedding video professionals</p>
+            </div>
+            <div class="why-choose-cards">
+                <div class="why-card fade-in">
+                    <div class="why-card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Industry Expert Instruction</h3>
+                    <p>Learn directly from Rajesh S, a professional with over 13 years of wedding industry experience and a passion for teaching the next generation of video editors.</p>
+                    <a href="#about" class="why-card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Our courses focus on practical sessions, live demos, and real wedding footage practice, ensuring you develop professional-level skills you can immediately apply.</p>
+                    <a href="#courses" class="why-card-link">View courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Career Growth</h3>
+                    <p>From beginner to Wedding Editing Maestro, our structured approach helps you develop a portfolio of work and the skills needed to succeed in the competitive wedding industry.</p>
+                    <a href="#contact" class="why-card-link">Contact us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Free Resources</h2>
+                <p>Enhance your wedding video editing with our free professional resources</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card fade-in">
+                    <div class="resource-image">
+                        <img src="https://via.placeholder.com/600x400/ff7a59/ffffff?text=Free+LUTs" alt="Free LUT Packs">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Wedding Film LUT Packs</h3>
+                        <p>Enhance your wedding videos with our professionally designed color grading presets, perfect for creating that cinematic look.</p>
+                        <a href="#" class="resource-btn">Download Free</a>
+                    </div>
+                </div>
+                <div class="resource-card fade-in">
+                    <div class="resource-image">
+                        <img src="https://via.placeholder.com/600x400/ff5e95/ffffff?text=Transitions" alt="Film Transitions">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Film Transitions Pack</h3>
+                        <p>Add professional movement to your wedding videos with our smooth, cinematic transitions that elevate any project.</p>
+                        <a href="#" class="resource-btn">Download Free</a>
+                    </div>
+                </div>
+                <div class="resource-card fade-in">
+                    <div class="resource-image">
+                        <img src="https://via.placeholder.com/600x400/0a3b5c/ffffff?text=Editing+Tips" alt="Video Editing Tips">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Weekly Editing Tips</h3>
+                        <p>Subscribe to our newsletter for free weekly tips, tricks, and tutorials to improve your wedding video editing skills.</p>
+                        <a href="#" class="resource-btn">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Students Say</h2>
+                <p>Hear from those who have experienced our courses and transformed their skills</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-track">
+                        <div class="testimonial-slide fade-in">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    The 90-day comprehensive course completely transformed my approach to wedding filmmaking. Rajesh sir's guidance and expertise helped me develop skills I now use daily as a professional wedding videographer.
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://via.placeholder.com/60x60/ff7a59/ffffff?text=RS" alt="Rahul Singh">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Rahul Singh</h4>
+                                        <p>Wedding Filmmaker, Delhi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide fade-in">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    The hands-on projects and personal feedback made all the difference. The DI course gave me a new perspective on color grading that has set my work apart from competitors. Well worth the investment!
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://via.placeholder.com/60x60/ff5e95/ffffff?text=AP" alt="Ananya Patel">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Ananya Patel</h4>
+                                        <p>Freelance Editor, Mumbai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide fade-in">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    Even the 3-day workshop was packed with valuable information. I learned practical techniques that I immediately applied to my projects. Rajesh sir has a gift for teaching complex concepts in a simple, understandable way.
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://via.placeholder.com/60x60/0a3b5c/ffffff?text=VK" alt="Vikram Kumar">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Vikram Kumar</h4>
+                                        <p>Photography Studio Owner, Bangalore</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions or ready to start your journey? Reach out to our team</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Video Visionary Academy</p>
+                            <p>Bangalore, Karnataka, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                            <p>Monday-Saturday: 10am - 7pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@videovisionary.com">info@videovisionary.com</a></p>
+                            <p>We'll respond within 24 hours</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course" class="form-label">Interested In</label>
+                            <select id="course" class="form-control" required>
+                                <option value="">Select a course</option>
+                                <option value="90days">90-Day Comprehensive Course</option>
+                                <option value="60days">60-Day Wedding Trailer Course</option>
+                                <option value="45days">45-Day Video Editing Course</option>
+                                <option value="30days">30-Day DI Course</option>
+                                <option value="photoshop">45-Day Photoshop Course</option>
+                                <option value="workshop">Short-Term Workshop</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Video<span>Visionary</span></a>
+                    <p>Empowering individuals in the wedding visual arts industry with professional-level editing, color grading, photography, album design, and video creation skills.</p>
+                    <p>Our mission: Limitless Learning for wedding industry professionals.</p>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> Courses</a></li>
+                        <li><a href="#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="#resources"><i class="fas fa-chevron-right"></i> Free Resources</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-title">Our Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> 90-Day Comprehensive</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> 60-Day Wedding Trailer</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> 45-Day Video Editing</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> 30-Day DI Course</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> Photoshop Course</a></li>
+                        <li><a href="#courses"><i class="fas fa-chevron-right"></i> Short-Term Workshops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p>Subscribe to receive free resources, tips, and updates on new courses.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email">
+                        <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <p>Get instant access to free LUTs and transitions!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Video Visionary Academy. All Rights Reserved. Last updated: April 18, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Testimonial Slider
+        const testimonialTrack = document.querySelector('.testimonial-track');
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+
+        // Auto slide for testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            goToSlide(currentSlide);
+        }, 5000);
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally add code to send the form data to a server
+            // For this example, we'll just show a success message
+            
+            alert('Thank you for your message! We will get back to you soon about your course inquiry.');
+            contactForm.reset();
+        });
+
+        // Scroll animation
+        function checkScroll() {
+            const fadeElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            
+            fadeElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+                const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
+                
+                if (isVisible) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        
+        // Run once on page load
+        window.addEventListener('load', checkScroll);
+        
+        // Run on scroll
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+</html>
